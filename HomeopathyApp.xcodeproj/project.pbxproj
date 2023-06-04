@@ -11,6 +11,20 @@
 		FA20C9362A21E48D002D3008 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA20C9352A21E48D002D3008 /* ContentView.swift */; };
 		FA20C9382A21E48F002D3008 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA20C9372A21E48F002D3008 /* Assets.xcassets */; };
 		FA20C93B2A21E48F002D3008 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA20C93A2A21E48F002D3008 /* Preview Assets.xcassets */; };
+		FA2156872A27CFEB006DEE12 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2156862A27CFEB006DEE12 /* SceneDelegate.swift */; };
+		FA21568D2A27D2DF006DEE12 /* HomeModuleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA21568C2A27D2DF006DEE12 /* HomeModuleRouter.swift */; };
+		FA2156912A27D37C006DEE12 /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2156902A27D37C006DEE12 /* BaseRouter.swift */; };
+		FA2156932A27D595006DEE12 /* SplashScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2156922A27D595006DEE12 /* SplashScreenRouter.swift */; };
+		FAC055E32A2B23EA008E401C /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC055E22A2B23EA008E401C /* SplashScreenView.swift */; };
+		FAC055E52A2B247B008E401C /* HostingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC055E42A2B247B008E401C /* HostingViewController.swift */; };
+		FAC055E72A2BA1DC008E401C /* UserStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC055E62A2BA1DC008E401C /* UserStorage.swift */; };
+		FAC055E92A2BA271008E401C /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC055E82A2BA271008E401C /* LoginUseCase.swift */; };
+		FAC055EB2A2BA2E6008E401C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC055EA2A2BA2E6008E401C /* LoginView.swift */; };
+		FAC055EF2A2BA50A008E401C /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC055EE2A2BA50A008E401C /* AppError.swift */; };
+		FAC055F32A2BA674008E401C /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC055F22A2BA674008E401C /* LoginModel.swift */; };
+		FAC055F52A2BB028008E401C /* LoginReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC055F42A2BB028008E401C /* LoginReducer.swift */; };
+		FAC055F72A2BB360008E401C /* ServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC055F62A2BB360008E401C /* ServiceProvider.swift */; };
+		FAC055F92A2BB381008E401C /* IServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC055F82A2BB381008E401C /* IServiceProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +33,21 @@
 		FA20C9352A21E48D002D3008 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FA20C9372A21E48F002D3008 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA20C93A2A21E48F002D3008 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FA2156862A27CFEB006DEE12 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FA2156892A27D1B7006DEE12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		FA21568C2A27D2DF006DEE12 /* HomeModuleRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModuleRouter.swift; sourceTree = "<group>"; };
+		FA2156902A27D37C006DEE12 /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
+		FA2156922A27D595006DEE12 /* SplashScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenRouter.swift; sourceTree = "<group>"; };
+		FAC055E22A2B23EA008E401C /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		FAC055E42A2B247B008E401C /* HostingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingViewController.swift; sourceTree = "<group>"; };
+		FAC055E62A2BA1DC008E401C /* UserStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStorage.swift; sourceTree = "<group>"; };
+		FAC055E82A2BA271008E401C /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
+		FAC055EA2A2BA2E6008E401C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		FAC055EE2A2BA50A008E401C /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		FAC055F22A2BA674008E401C /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		FAC055F42A2BB028008E401C /* LoginReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginReducer.swift; sourceTree = "<group>"; };
+		FAC055F62A2BB360008E401C /* ServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProvider.swift; sourceTree = "<group>"; };
+		FAC055F82A2BB381008E401C /* IServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IServiceProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,9 +80,15 @@
 		FA20C9322A21E48D002D3008 /* HomeopathyApp */ = {
 			isa = PBXGroup;
 			children = (
-				FA20C9332A21E48D002D3008 /* HomeopathyAppApp.swift */,
+				FA2156892A27D1B7006DEE12 /* Info.plist */,
+				FA2156852A27CCE5006DEE12 /* Common */,
+				FA2156842A27CCDA006DEE12 /* Database */,
+				FA2156832A27CCD0006DEE12 /* Services */,
+				FA2156812A27CC14006DEE12 /* SplashScreen */,
+				FA2156802A27CBF4006DEE12 /* Login */,
+				FA21567F2A27CBE9006DEE12 /* Home */,
 				FA20C9352A21E48D002D3008 /* ContentView.swift */,
-				FA20C9372A21E48F002D3008 /* Assets.xcassets */,
+				FA2156882A27D0BC006DEE12 /* Resources */,
 				FA20C9392A21E48F002D3008 /* Preview Content */,
 			);
 			path = HomeopathyApp;
@@ -65,6 +100,71 @@
 				FA20C93A2A21E48F002D3008 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FA21567F2A27CBE9006DEE12 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				FA20C9332A21E48D002D3008 /* HomeopathyAppApp.swift */,
+				FA2156862A27CFEB006DEE12 /* SceneDelegate.swift */,
+				FA21568C2A27D2DF006DEE12 /* HomeModuleRouter.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		FA2156802A27CBF4006DEE12 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				FAC055E62A2BA1DC008E401C /* UserStorage.swift */,
+				FAC055E82A2BA271008E401C /* LoginUseCase.swift */,
+				FAC055EA2A2BA2E6008E401C /* LoginView.swift */,
+				FAC055F22A2BA674008E401C /* LoginModel.swift */,
+				FAC055F42A2BB028008E401C /* LoginReducer.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		FA2156812A27CC14006DEE12 /* SplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FA2156922A27D595006DEE12 /* SplashScreenRouter.swift */,
+				FAC055E22A2B23EA008E401C /* SplashScreenView.swift */,
+			);
+			path = SplashScreen;
+			sourceTree = "<group>";
+		};
+		FA2156832A27CCD0006DEE12 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FAC055F62A2BB360008E401C /* ServiceProvider.swift */,
+				FAC055F82A2BB381008E401C /* IServiceProvider.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		FA2156842A27CCDA006DEE12 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		FA2156852A27CCE5006DEE12 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				FA2156902A27D37C006DEE12 /* BaseRouter.swift */,
+				FAC055E42A2B247B008E401C /* HostingViewController.swift */,
+				FAC055EE2A2BA50A008E401C /* AppError.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		FA2156882A27D0BC006DEE12 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FA20C9372A21E48F002D3008 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +237,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAC055E32A2B23EA008E401C /* SplashScreenView.swift in Sources */,
+				FAC055F32A2BA674008E401C /* LoginModel.swift in Sources */,
+				FAC055E52A2B247B008E401C /* HostingViewController.swift in Sources */,
 				FA20C9362A21E48D002D3008 /* ContentView.swift in Sources */,
+				FAC055F92A2BB381008E401C /* IServiceProvider.swift in Sources */,
+				FA21568D2A27D2DF006DEE12 /* HomeModuleRouter.swift in Sources */,
+				FAC055EF2A2BA50A008E401C /* AppError.swift in Sources */,
+				FA2156912A27D37C006DEE12 /* BaseRouter.swift in Sources */,
+				FAC055E72A2BA1DC008E401C /* UserStorage.swift in Sources */,
 				FA20C9342A21E48D002D3008 /* HomeopathyAppApp.swift in Sources */,
+				FAC055F52A2BB028008E401C /* LoginReducer.swift in Sources */,
+				FA2156872A27CFEB006DEE12 /* SceneDelegate.swift in Sources */,
+				FAC055EB2A2BA2E6008E401C /* LoginView.swift in Sources */,
+				FAC055F72A2BB360008E401C /* ServiceProvider.swift in Sources */,
+				FA2156932A27D595006DEE12 /* SplashScreenRouter.swift in Sources */,
+				FAC055E92A2BA271008E401C /* LoginUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +384,7 @@
 				DEVELOPMENT_TEAM = 6KB4J4B5VM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HomeopathyApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -300,6 +415,7 @@
 				DEVELOPMENT_TEAM = 6KB4J4B5VM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HomeopathyApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
