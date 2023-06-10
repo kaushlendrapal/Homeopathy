@@ -8,13 +8,27 @@
 import Foundation
 import Combine
 
-final class UserStorage {
-    
-    var loginState: LoginState = LoginState()
+final class UserStorage: ObservableObject {
+    @Published var loginState: LoginState
     var loginAction: LoginAction = .none
-    var loginReducer: LoginReducer = LoginReducer()
-    var loginUseCase: LoginUseCase = LoginUseCase()
+    var loginReducer: LoginReducer
+    var loginUseCase: LoginUseCase
     private var disposableBag: Set<AnyCancellable> = []
+    
+    init(loginState: LoginState,
+         loginAction: LoginAction = .none,
+         loginReducer: LoginReducer,
+         loginUseCase: LoginUseCase) {
+        self.loginState = loginState
+        self.loginAction = loginAction
+        self.loginReducer = loginReducer
+        self.loginUseCase = loginUseCase
+    }
+    
+    func resetUserStateOnAppear() {
+        self.loginAction = .none
+        
+    }
     
     func dispatch(state: inout LoginState, action: LoginAction) {
         loginReducer.loginReducer(state: &state, action: action)

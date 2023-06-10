@@ -16,7 +16,10 @@ class HomeModuleRouter: BaseRouter {
     }
     
     override func push() {
-        let coordinator = SplashScreenRouter(navigationController: navigationController)
-        coordinator.push()
+        var storage = AppStorage(launchStep: .start)
+        let view = SplashScreenView(appStorage: storage)
+        let controller = HostingViewController(rootView: view)
+        navigationController.pushViewController(controller, animated: true)
     }
+    
 }

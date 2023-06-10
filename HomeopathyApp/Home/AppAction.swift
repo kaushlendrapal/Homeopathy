@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+enum AppAction {
+    case goToLoginScreen
+    case goToDashboard
+}

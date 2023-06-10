@@ -14,6 +14,7 @@ let kAppWindow = "APP_WINDOW"
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    var homeModuleRouter: HomeModuleRouter!
         
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
@@ -22,6 +23,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Handle deep link on cold start
         let navigationController = UINavigationController()
         let coordinator = HomeModuleRouter(navigationController: navigationController)
+        homeModuleRouter = coordinator
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
         window?.accessibilityIdentifier = kAppWindow

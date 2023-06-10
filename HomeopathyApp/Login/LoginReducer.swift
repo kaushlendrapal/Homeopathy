@@ -6,9 +6,12 @@
 //
 
 import Foundation
+import Combine
 
-struct LoginState {
+class LoginState: ObservableObject {
     var loginModel: LoginModel = LoginModel()
+    var userEmail: String = ""
+    var password: String = ""
     var isFetching: Bool = true
     var error: String?
 }
