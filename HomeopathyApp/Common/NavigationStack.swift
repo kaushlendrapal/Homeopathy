@@ -6,8 +6,35 @@
 //
 
 import Foundation
+import UIKit
 
-class NavigationStack {
+/* This class is used to manage Navigation stack
+ *
+ */
+
+final class NavigationStack {
+    
+    static func getKeyWindow() -> UIWindow? {
+        guard let keyWindow = (UIApplication
+            .shared
+            .connectedScenes
+            .compactMap { $0 as? UIWindowScene }
+            .first?.delegate as? SceneDelegate)?
+            .window else { return nil }
+        
+        return keyWindow
+    }
+    
+    static func getRootNavigationController() -> UINavigationController? {
+        guard let sceneDelegate = (UIApplication
+            .shared
+            .connectedScenes
+            .compactMap { $0 as? UIWindowScene }
+            .first?.delegate as? SceneDelegate)
+        else { return nil }
+        
+        return sceneDelegate.homeModuleRouter.navigationController
+    }
     
     
     
