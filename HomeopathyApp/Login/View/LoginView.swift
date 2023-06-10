@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 
 struct LoginView: View {
+    @EnvironmentObject var userStorage: UserStorage
     var body: some View {
         Text("Login View")
     }
