@@ -9,6 +9,8 @@ import Foundation
 
 final class AppStorage {
     var launchStep: LaunchStep = .start
+    var mainMenuconfig: MainMenuConfig?
+    
     init(launchStep: LaunchStep) {
         self.launchStep = launchStep
     }
@@ -27,26 +29,20 @@ final class AppStorage {
     }
     
     private func onfinishLaunching() {
-        Task.detached {
-            try await Task.sleep(nanoseconds: 1_000_000_000)
-            self.launchStep = .libSetup
-            self.launchSetupForInitialAppLoading()
-            print("onfinishLaunching")
-        }
+//        self.launchStep = .libSetup
+//        self.launchSetupForInitialAppLoading()
+        FirebaseRemoteStore.shared.fetchRemoteConfigValues(for: self)
     }
         
     private func onLibSetup() {
-        Task.detached {
-            try await Task.sleep(nanoseconds: 1_000_000_000)
-            self.launchStep = .appUpdate
-            self.launchSetupForInitialAppLoading()
-            print("onLibSetup")
-        }
+        self.launchStep = .appUpdate
+        self.launchSetupForInitialAppLoading()
+        print("onLibSetup")
     }
         
     private func checkForAppUpdate() {
         Task.detached {
-            try await Task.sleep(nanoseconds: 2_000_000_000)
+            try await Task.sleep(nanoseconds: 1_000_000_000)
             self.launchStep = .finish
             self.launchSetupForInitialAppLoading()
             print("checkForAppUpdate")
@@ -64,6 +60,16 @@ final class AppStorage {
         }
     }
 
+}
+
+extension AppStorage: IFirebaseRemoteStore {
+    
+    func onRemoteConfigFetchCompleted() {
+        self.launchStep = .libSetup
+        self.launchSetupForInitialAppLoading()
+        self.mainMenuconfig = FirebaseRemoteStore.shared.mainMenuConfig
+        print("Firebase fetch is done")
+    }
 }
 
 

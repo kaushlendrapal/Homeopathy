@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA004AFA2A34BA31005C9B48 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FA004AF92A34BA31005C9B48 /* FirebaseAnalyticsSwift */; };
+		FA004AFC2A34BA31005C9B48 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = FA004AFB2A34BA31005C9B48 /* FirebaseAppCheck */; };
+		FA004AFE2A34BA31005C9B48 /* FirebaseAppDistribution-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = FA004AFD2A34BA31005C9B48 /* FirebaseAppDistribution-Beta */; };
+		FA004B002A34BA31005C9B48 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = FA004AFF2A34BA31005C9B48 /* FirebaseCrashlytics */; };
+		FA004B022A34BA31005C9B48 /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FA004B012A34BA31005C9B48 /* FirebaseDatabaseSwift */; };
+		FA004B042A34BA31005C9B48 /* FirebasePerformance in Frameworks */ = {isa = PBXBuildFile; productRef = FA004B032A34BA31005C9B48 /* FirebasePerformance */; };
+		FA004B062A34BA31005C9B48 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FA004B052A34BA31005C9B48 /* FirebaseRemoteConfigSwift */; };
+		FA004B082A34BA31005C9B48 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = FA004B072A34BA31005C9B48 /* FirebaseStorage */; };
+		FA004B0A2A34BCBD005C9B48 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FA004B092A34BCBD005C9B48 /* GoogleService-Info.plist */; };
+		FA004B0D2A34D66A005C9B48 /* FirebaseRemoteStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA004B0C2A34D66A005C9B48 /* FirebaseRemoteStore.swift */; };
+		FA004B0F2A34D6B2005C9B48 /* MainMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA004B0E2A34D6B2005C9B48 /* MainMenuModel.swift */; };
+		FA004B122A34F854005C9B48 /* MenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA004B112A34F854005C9B48 /* MenuItemView.swift */; };
+		FA004B142A34F9BF005C9B48 /* UxStyleGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA004B132A34F9BF005C9B48 /* UxStyleGuide.swift */; };
+		FA004B172A34FD2D005C9B48 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = FA004B162A34FD2D005C9B48 /* Kingfisher */; };
+		FA004B192A3506B7005C9B48 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA004B182A3506B7005C9B48 /* DashboardView.swift */; };
 		FA1B01DF2A33C24B001F3813 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1B01DE2A33C24B001F3813 /* Colors.swift */; };
 		FA1B01E12A33C261001F3813 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1B01E02A33C261001F3813 /* Fonts.swift */; };
 		FA1B01E32A33C275001F3813 /* Gradients.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1B01E22A33C275001F3813 /* Gradients.swift */; };
@@ -34,6 +49,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA004B092A34BCBD005C9B48 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = "GoogleService-Info.plist"; path = "Tools/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		FA004B0C2A34D66A005C9B48 /* FirebaseRemoteStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseRemoteStore.swift; sourceTree = "<group>"; };
+		FA004B0E2A34D6B2005C9B48 /* MainMenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuModel.swift; sourceTree = "<group>"; };
+		FA004B112A34F854005C9B48 /* MenuItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemView.swift; sourceTree = "<group>"; };
+		FA004B132A34F9BF005C9B48 /* UxStyleGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UxStyleGuide.swift; sourceTree = "<group>"; };
+		FA004B182A3506B7005C9B48 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		FA1B01DE2A33C24B001F3813 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		FA1B01E02A33C261001F3813 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		FA1B01E22A33C275001F3813 /* Gradients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradients.swift; sourceTree = "<group>"; };
@@ -67,12 +88,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA004B022A34BA31005C9B48 /* FirebaseDatabaseSwift in Frameworks */,
+				FA004AFC2A34BA31005C9B48 /* FirebaseAppCheck in Frameworks */,
+				FA004B042A34BA31005C9B48 /* FirebasePerformance in Frameworks */,
+				FA004B172A34FD2D005C9B48 /* Kingfisher in Frameworks */,
+				FA004B062A34BA31005C9B48 /* FirebaseRemoteConfigSwift in Frameworks */,
+				FA004B002A34BA31005C9B48 /* FirebaseCrashlytics in Frameworks */,
+				FA004B082A34BA31005C9B48 /* FirebaseStorage in Frameworks */,
+				FA004AFA2A34BA31005C9B48 /* FirebaseAnalyticsSwift in Frameworks */,
+				FA004AFE2A34BA31005C9B48 /* FirebaseAppDistribution-Beta in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA004B0B2A34D63C005C9B48 /* FirebaseRemoteConfig */ = {
+			isa = PBXGroup;
+			children = (
+				FA004B0C2A34D66A005C9B48 /* FirebaseRemoteStore.swift */,
+				FA004B0E2A34D6B2005C9B48 /* MainMenuModel.swift */,
+			);
+			path = FirebaseRemoteConfig;
+			sourceTree = "<group>";
+		};
+		FA004B102A34F834005C9B48 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				FA004B112A34F854005C9B48 /* MenuItemView.swift */,
+				FA004B182A3506B7005C9B48 /* DashboardView.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
 		FA20C9272A21E48D002D3008 = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +140,8 @@
 		FA20C9322A21E48D002D3008 /* HomeopathyApp */ = {
 			isa = PBXGroup;
 			children = (
+				FA004B102A34F834005C9B48 /* Dashboard */,
+				FA004B092A34BCBD005C9B48 /* GoogleService-Info.plist */,
 				FA2156892A27D1B7006DEE12 /* Info.plist */,
 				FA2156852A27CCE5006DEE12 /* Common */,
 				FA2156842A27CCDA006DEE12 /* Database */,
@@ -150,6 +200,7 @@
 		FA2156842A27CCDA006DEE12 /* Database */ = {
 			isa = PBXGroup;
 			children = (
+				FA004B0B2A34D63C005C9B48 /* FirebaseRemoteConfig */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -164,6 +215,7 @@
 				FA1B01DE2A33C24B001F3813 /* Colors.swift */,
 				FA1B01E02A33C261001F3813 /* Fonts.swift */,
 				FA1B01E22A33C275001F3813 /* Gradients.swift */,
+				FA004B132A34F9BF005C9B48 /* UxStyleGuide.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -209,6 +261,17 @@
 			dependencies = (
 			);
 			name = HomeopathyApp;
+			packageProductDependencies = (
+				FA004AF92A34BA31005C9B48 /* FirebaseAnalyticsSwift */,
+				FA004AFB2A34BA31005C9B48 /* FirebaseAppCheck */,
+				FA004AFD2A34BA31005C9B48 /* FirebaseAppDistribution-Beta */,
+				FA004AFF2A34BA31005C9B48 /* FirebaseCrashlytics */,
+				FA004B012A34BA31005C9B48 /* FirebaseDatabaseSwift */,
+				FA004B032A34BA31005C9B48 /* FirebasePerformance */,
+				FA004B052A34BA31005C9B48 /* FirebaseRemoteConfigSwift */,
+				FA004B072A34BA31005C9B48 /* FirebaseStorage */,
+				FA004B162A34FD2D005C9B48 /* Kingfisher */,
+			);
 			productName = HomeopathyApp;
 			productReference = FA20C9302A21E48D002D3008 /* HomeopathyApp.app */;
 			productType = "com.apple.product-type.application";
@@ -237,6 +300,10 @@
 				Base,
 			);
 			mainGroup = FA20C9272A21E48D002D3008;
+			packageReferences = (
+				FA004AF82A34BA31005C9B48 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				FA004B152A34FD2D005C9B48 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = FA20C9312A21E48D002D3008 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -252,6 +319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA1B01E52A33CF2F001F3813 /* Colors.xcassets in Resources */,
+				FA004B0A2A34BCBD005C9B48 /* GoogleService-Info.plist in Resources */,
 				FA20C93B2A21E48F002D3008 /* Preview Assets.xcassets in Resources */,
 				FA20C9382A21E48F002D3008 /* Assets.xcassets in Resources */,
 			);
@@ -264,14 +332,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA004B0F2A34D6B2005C9B48 /* MainMenuModel.swift in Sources */,
 				FAE55F9E2A2C7B24005E82B1 /* AppStorage.swift in Sources */,
 				FAC055E32A2B23EA008E401C /* SplashScreenView.swift in Sources */,
 				FAC055F32A2BA674008E401C /* LoginModel.swift in Sources */,
+				FA004B142A34F9BF005C9B48 /* UxStyleGuide.swift in Sources */,
+				FA004B122A34F854005C9B48 /* MenuItemView.swift in Sources */,
 				FAC055E52A2B247B008E401C /* HostingViewController.swift in Sources */,
 				FAC055F92A2BB381008E401C /* IServiceProvider.swift in Sources */,
 				FA1B01E32A33C275001F3813 /* Gradients.swift in Sources */,
 				FAE55FA22A2CA120005E82B1 /* NavigationStack.swift in Sources */,
 				FA21568D2A27D2DF006DEE12 /* HomeModuleRouter.swift in Sources */,
+				FA004B192A3506B7005C9B48 /* DashboardView.swift in Sources */,
+				FA004B0D2A34D66A005C9B48 /* FirebaseRemoteStore.swift in Sources */,
 				FAC055EF2A2BA50A008E401C /* AppError.swift in Sources */,
 				FA2156912A27D37C006DEE12 /* BaseRouter.swift in Sources */,
 				FAC055E72A2BA1DC008E401C /* UserStorage.swift in Sources */,
@@ -410,26 +483,29 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HomeopathyApp/Preview Content\"";
-				DEVELOPMENT_TEAM = 6KB4J4B5VM;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HomeopathyApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Homeopathy App";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationPortrait";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.viacom.demoapp.HomeopathyApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.homeopathy.success;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -441,26 +517,29 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HomeopathyApp/Preview Content\"";
-				DEVELOPMENT_TEAM = 6KB4J4B5VM;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HomeopathyApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Homeopathy App";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationPortrait";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.viacom.demoapp.HomeopathyApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.homeopathy.success;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -489,6 +568,73 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FA004AF82A34BA31005C9B48 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+		FA004B152A34FD2D005C9B48 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FA004AF92A34BA31005C9B48 /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA004AF82A34BA31005C9B48 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+		FA004AFB2A34BA31005C9B48 /* FirebaseAppCheck */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA004AF82A34BA31005C9B48 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAppCheck;
+		};
+		FA004AFD2A34BA31005C9B48 /* FirebaseAppDistribution-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA004AF82A34BA31005C9B48 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAppDistribution-Beta";
+		};
+		FA004AFF2A34BA31005C9B48 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA004AF82A34BA31005C9B48 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		FA004B012A34BA31005C9B48 /* FirebaseDatabaseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA004AF82A34BA31005C9B48 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabaseSwift;
+		};
+		FA004B032A34BA31005C9B48 /* FirebasePerformance */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA004AF82A34BA31005C9B48 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebasePerformance;
+		};
+		FA004B052A34BA31005C9B48 /* FirebaseRemoteConfigSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA004AF82A34BA31005C9B48 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfigSwift;
+		};
+		FA004B072A34BA31005C9B48 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA004AF82A34BA31005C9B48 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		FA004B162A34FD2D005C9B48 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA004B152A34FD2D005C9B48 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FA20C9282A21E48D002D3008 /* Project object */;
 }

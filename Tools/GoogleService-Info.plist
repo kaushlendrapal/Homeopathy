@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1072090704164-ftgp2sjbhqrvt8uct2dnbv615qeskk3r.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1072090704164-ftgp2sjbhqrvt8uct2dnbv615qeskk3r</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBCnr_LF0nFsMh75hLNiQ167V5tBL0iA2M</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1072090704164</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.homeopathy.success</string>
+	<key>PROJECT_ID</key>
+	<string>homeopathyapp-5c0a3</string>
+	<key>STORAGE_BUCKET</key>
+	<string>homeopathyapp-5c0a3.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1072090704164:ios:4ed9bba8dfad25cff96bb1</string>
+</dict>
+</plist>

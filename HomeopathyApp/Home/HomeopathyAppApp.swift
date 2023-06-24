@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FirebaseCore
 
 @main
 class HomeopathyAppApp: UIResponder, UIApplicationDelegate {
@@ -18,6 +19,8 @@ class HomeopathyAppApp: UIResponder, UIApplicationDelegate {
     // swiftlint: disable discouraged_optional_collection
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        FirebaseApp.configure()
+
         return true
     }
     
