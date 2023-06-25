@@ -17,10 +17,8 @@ class OnboardingRouter: BaseRouter {
     
     override func push() {
         let userStorage = UserStorage(loginState: LoginState(),
-                                      loginReducer: LoginReducer(),
                                       loginUseCase: LoginUseCase())
-        let view = LoginView()
-            .environmentObject(userStorage)
+        let view = LoginView(userStorage: userStorage)
         
         let controller = HostingViewController(rootView: view)
         navigationController.pushViewController(controller, animated: true)

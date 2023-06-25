@@ -36,6 +36,17 @@ final class NavigationStack {
         return sceneDelegate.homeModuleRouter.navigationController
     }
     
+    static func getHomeModuleRouter() -> HomeModuleRouter? {
+        guard let sceneDelegate = (UIApplication
+            .shared
+            .connectedScenes
+            .compactMap { $0 as? UIWindowScene }
+            .first?.delegate as? SceneDelegate)
+        else { return nil }
+        
+        return sceneDelegate.homeModuleRouter
+    }
+    
     
     
 }

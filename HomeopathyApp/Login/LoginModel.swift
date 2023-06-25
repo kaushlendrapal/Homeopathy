@@ -8,5 +8,9 @@
 import Foundation
 
 struct LoginModel {
-    
+    var email = ""
+    var password = ""
+    var isValidationPassed: Bool = false
+    var loginSuccess: Bool = false
+
 }

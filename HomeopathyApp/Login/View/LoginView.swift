@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct LoginView: View {
-    @EnvironmentObject var userStorage: UserStorage
+    @ObservedObject var userStorage: UserStorage
     @State private var email = ""
     @State private var password = ""
 
@@ -43,7 +43,10 @@ struct LoginView: View {
                 }
                 .padding([.leading, .trailing], 28.0)
                 
-                Button(action: {}) {
+                Button(action: {
+                    // enable button press only if validation pass
+                    self.userStorage.signIn(with: email, password: password)
+                }) {
                     Text("Sign In")
                         .font(.headline)
                         .foregroundColor(.white)
@@ -65,16 +68,27 @@ struct LoginView: View {
                                startPoint: .top,
                                endPoint: .bottom)
                 .edgesIgnoringSafeArea(.all))
+            if userStorage.shouldShow {
+                AppAlertView(alertModel: self.userStorage.alertModel,
+                             onOkeyAction: {
+                    self.userStorage.shouldShow.toggle()
+                    userStorage.alertModel.shouldShow = false
+                })
+                .isHidden(!userStorage.shouldShow)
+            }
         }
         .onAppear {
             // perform load action
             userStorage.resetUserStateOnAppear()
+                
         }
     }
 }
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView()
+        let userStorage = UserStorage(loginState: LoginState(),
+                                      loginUseCase: LoginUseCase())
+        LoginView(userStorage: userStorage)
     }
 }

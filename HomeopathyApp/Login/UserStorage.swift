@@ -11,17 +11,19 @@ import Combine
 final class UserStorage: ObservableObject {
     @Published var loginState: LoginState
     var loginAction: LoginAction = .none
-    var loginReducer: LoginReducer
     var loginUseCase: LoginUseCase
+    @Published var shouldShow: Bool = false
+
+    // will move alert to common place accessible to all mini storage
+    @Published var alertModel: AlertModel = AlertModel()
     private var disposableBag: Set<AnyCancellable> = []
+    var authManager: AuthenticationManager = AuthenticationManager()
     
     init(loginState: LoginState,
          loginAction: LoginAction = .none,
-         loginReducer: LoginReducer,
          loginUseCase: LoginUseCase) {
         self.loginState = loginState
         self.loginAction = loginAction
-        self.loginReducer = loginReducer
         self.loginUseCase = loginUseCase
     }
     
@@ -30,15 +32,43 @@ final class UserStorage: ObservableObject {
         
     }
     
-    func dispatch(state: inout LoginState, action: LoginAction) {
-        loginReducer.loginReducer(state: &state, action: action)
+    func signIn(with email: String, password: String) {
+        Task {
+            do {
+                var _ = try await authManager.signIn(with: email, password: password)
+                await MainActor.run(body: {
+                    self.routeToDashboardScreen()
+                })
+            } catch {
+                await MainActor.run(body: {
+                    // show alert user name or password is invalid
+                    print(error)
+                    self.showValidationAlertOnFailure()
+                })
+            }
+        }
+    }
+    
+    func showValidationAlertOnFailure() {
+        // invalid login error
+        self.alertModel.title = ValidationError.InvalidEmailPassword.title
+        self.alertModel.desc = ValidationError.InvalidEmailPassword.desc
+        self.shouldShow = true
+    }
+    
+    func routeToDashboardScreen() {
+        let homeModuleRouter: HomeModuleRouter? = NavigationStack.getHomeModuleRouter()
+        homeModuleRouter?.pushDashboardScreen()
+    }
+    
+    func dispatch(state: LoginState, action: LoginAction) {
         
-        // side effect
-        dispatchLoginUseCaseProxy(state: &state, action: action)
+        // side effect with updated state
+        dispatchLoginUseCaseProxy(state: state, action: action)
     }
     
     // side effect on action will perform here
-    func dispatchLoginUseCaseProxy(state: inout LoginState, action: LoginAction) {
+    func dispatchLoginUseCaseProxy(state: LoginState, action: LoginAction) {
         switch action {
         case .none: break
         case .fetching:
@@ -55,5 +85,11 @@ final class UserStorage: ObservableObject {
         default: break
         }
     }
+    
+}
+
+
+// user reducer function
+extension UserStorage {
     
 }
