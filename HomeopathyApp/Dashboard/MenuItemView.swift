@@ -39,13 +39,14 @@ struct MenuItemView: View {
                         activeImageUrl: menu.activeIconUrl,
                         state: .active)
                 .aspectRatio(contentMode: .fit)
-                .frame(width: DashboardUxGuide.tabBarWidth, height: DashboardUxGuide.tabBarHeight)
+                .frame(width: 32, height: 32)
                 .padding(.top, DashboardUxGuide.tabPadding)
             
             Text(menu.title)
-                .font(isSelected ? Fonts.semiBold(16.0).font : Fonts.regular(12.0).font)
+                .font(isSelected ? Fonts.bold(16.0).font : Fonts.bold(14.0).font)
                 .foregroundColor(isSelected ? Color.red : Color.black)
         }
+        .frame(width: DashboardUxGuide.tabBarWidth, height: DashboardUxGuide.tabBarHeight)
     }
 }
 

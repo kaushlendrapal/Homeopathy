@@ -52,14 +52,17 @@ struct HPImageView: View {
         case .catalogue:
             let imageName = state == .active ? self.activeImageUrl ?? "" : self.inActiveImageUrl ?? ""
             Image(imageName)
+                .resizable()
         case .system:
             let systemImageUrl = state == .active ? self.activeImageUrl ?? "" : self.inActiveImageUrl ?? ""
             Image(systemName: systemImageUrl)
+                .resizable()
         case .remote:
             let remoteUrl: URL = state == .active ?
             URL(string:self.activeImageUrl ?? Self.defaultImageUrl)! :
             URL(string: self.inActiveImageUrl ?? Self.defaultImageUrl)!
             KFImage(remoteUrl)
+                .resizable()
         }
     }
 }

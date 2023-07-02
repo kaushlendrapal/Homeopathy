@@ -14,15 +14,23 @@ struct DashboardView: View {
 
     var body: some View {
         ZStack(alignment: .topLeading) {
-            
             VStack(spacing: 0.0) {
-                //            showHeaderView()
+                showHeaderView()
+                Spacer()
+                Text("Content view")
+                Spacer()
                 bottomMenuView
             }
-            .edgesIgnoringSafeArea(.bottom)
         }
     }
     
+    func showHeaderView() -> some View {
+        ZStack(alignment: .top) {
+            SceneHeaderView()
+//                .zIndex(1)
+        }
+//        .frame(height: 44.0)
+    }
     
     private var bottomMenuView: some View {
         VStack {

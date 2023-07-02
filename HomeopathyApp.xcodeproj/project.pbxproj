@@ -37,6 +37,7 @@
 		FA42C2602A476A6C00A378CC /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42C25F2A476A6C00A378CC /* FirestoreManager.swift */; };
 		FA9B81B72A51B9790073A8F3 /* HPImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9B81B62A51B9790073A8F3 /* HPImageView.swift */; };
 		FA9B81B92A51E1100073A8F3 /* SceneHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9B81B82A51E1100073A8F3 /* SceneHeaderView.swift */; };
+		FA9B81BB2A51E7DB0073A8F3 /* AppHeaderConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9B81BA2A51E7DB0073A8F3 /* AppHeaderConfig.swift */; };
 		FAC055E32A2B23EA008E401C /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC055E22A2B23EA008E401C /* SplashScreenView.swift */; };
 		FAC055E52A2B247B008E401C /* HostingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC055E42A2B247B008E401C /* HostingViewController.swift */; };
 		FAC055E72A2BA1DC008E401C /* UserStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC055E62A2BA1DC008E401C /* UserStorage.swift */; };
@@ -79,6 +80,7 @@
 		FA42C25F2A476A6C00A378CC /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
 		FA9B81B62A51B9790073A8F3 /* HPImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HPImageView.swift; sourceTree = "<group>"; };
 		FA9B81B82A51E1100073A8F3 /* SceneHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneHeaderView.swift; sourceTree = "<group>"; };
+		FA9B81BA2A51E7DB0073A8F3 /* AppHeaderConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppHeaderConfig.swift; sourceTree = "<group>"; };
 		FAC055E22A2B23EA008E401C /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		FAC055E42A2B247B008E401C /* HostingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingViewController.swift; sourceTree = "<group>"; };
 		FAC055E62A2BA1DC008E401C /* UserStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStorage.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 			children = (
 				FA004B0C2A34D66A005C9B48 /* FirebaseRemoteStore.swift */,
 				FA004B0E2A34D6B2005C9B48 /* MainMenuModel.swift */,
+				FA9B81BA2A51E7DB0073A8F3 /* AppHeaderConfig.swift */,
 			);
 			path = FirebaseRemoteConfig;
 			sourceTree = "<group>";
@@ -400,6 +403,7 @@
 				FAC055F92A2BB381008E401C /* IServiceProvider.swift in Sources */,
 				FA1B01E32A33C275001F3813 /* Gradients.swift in Sources */,
 				FAE55FA22A2CA120005E82B1 /* NavigationStack.swift in Sources */,
+				FA9B81BB2A51E7DB0073A8F3 /* AppHeaderConfig.swift in Sources */,
 				FA21568D2A27D2DF006DEE12 /* HomeModuleRouter.swift in Sources */,
 				FA004B192A3506B7005C9B48 /* DashboardView.swift in Sources */,
 				FA42C25E2A4763ED00A378CC /* AuthenticationManager.swift in Sources */,

@@ -19,11 +19,12 @@ class FirebaseRemoteStore {
     
     enum RemoteConfigKeys: String {
      case mainMenuConfig = "mainMenu"
-        
+     case appHeaderConfig = "appHeaderConfig"
     }
     
     var remoteConfigration: RemoteConfig!
     var mainMenuConfig: MainMenuConfig?
+    var appHeaderConfig: AppHeaderConfig?
     weak var delegate: IFirebaseRemoteStore?
     
     private init() {
@@ -51,9 +52,12 @@ class FirebaseRemoteStore {
     
     private func setupRemoteConfig() {
         guard let remoteConfig = remoteConfigration else { return }
+        // main menu tabs
         let data = remoteConfig[RemoteConfigKeys.mainMenuConfig.rawValue].dataValue
-        let decoder = JSONDecoder()
-        self.mainMenuConfig = try? decoder.decode(MainMenuConfig.self, from: data)
+        self.mainMenuConfig = try? JSONDecoder().decode(MainMenuConfig.self, from: data)
+        // App header config
+        let appData = remoteConfig[RemoteConfigKeys.appHeaderConfig.rawValue].dataValue
+        self.appHeaderConfig = try? JSONDecoder().decode(AppHeaderConfig.self, from: appData)
         
     }
 }
