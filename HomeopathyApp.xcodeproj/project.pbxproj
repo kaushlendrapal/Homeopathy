@@ -35,6 +35,8 @@
 		FA42C25C2A47322900A378CC /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = FA42C25B2A47322900A378CC /* FirebaseAuth */; };
 		FA42C25E2A4763ED00A378CC /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42C25D2A4763ED00A378CC /* AuthenticationManager.swift */; };
 		FA42C2602A476A6C00A378CC /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA42C25F2A476A6C00A378CC /* FirestoreManager.swift */; };
+		FA9B81B72A51B9790073A8F3 /* HPImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9B81B62A51B9790073A8F3 /* HPImageView.swift */; };
+		FA9B81B92A51E1100073A8F3 /* SceneHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9B81B82A51E1100073A8F3 /* SceneHeaderView.swift */; };
 		FAC055E32A2B23EA008E401C /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC055E22A2B23EA008E401C /* SplashScreenView.swift */; };
 		FAC055E52A2B247B008E401C /* HostingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC055E42A2B247B008E401C /* HostingViewController.swift */; };
 		FAC055E72A2BA1DC008E401C /* UserStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC055E62A2BA1DC008E401C /* UserStorage.swift */; };
@@ -75,6 +77,8 @@
 		FA2156902A27D37C006DEE12 /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
 		FA42C25D2A4763ED00A378CC /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
 		FA42C25F2A476A6C00A378CC /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
+		FA9B81B62A51B9790073A8F3 /* HPImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HPImageView.swift; sourceTree = "<group>"; };
+		FA9B81B82A51E1100073A8F3 /* SceneHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneHeaderView.swift; sourceTree = "<group>"; };
 		FAC055E22A2B23EA008E401C /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		FAC055E42A2B247B008E401C /* HostingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingViewController.swift; sourceTree = "<group>"; };
 		FAC055E62A2BA1DC008E401C /* UserStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStorage.swift; sourceTree = "<group>"; };
@@ -153,6 +157,7 @@
 		FA20C9322A21E48D002D3008 /* HomeopathyApp */ = {
 			isa = PBXGroup;
 			children = (
+				FA9B81B52A51B9560073A8F3 /* UxComponents */,
 				FA004B092A34BCBD005C9B48 /* GoogleService-Info.plist */,
 				FA2156892A27D1B7006DEE12 /* Info.plist */,
 				FA2156852A27CCE5006DEE12 /* Common */,
@@ -233,7 +238,6 @@
 				FA1B01E02A33C261001F3813 /* Fonts.swift */,
 				FA1B01E22A33C275001F3813 /* Gradients.swift */,
 				FA004B132A34F9BF005C9B48 /* UxStyleGuide.swift */,
-				FAF280592A489145008CE5C1 /* ViewUtils.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -252,6 +256,15 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FA9B81B52A51B9560073A8F3 /* UxComponents */ = {
+			isa = PBXGroup;
+			children = (
+				FA9B81B62A51B9790073A8F3 /* HPImageView.swift */,
+				FA9B81B82A51E1100073A8F3 /* SceneHeaderView.swift */,
+			);
+			path = UxComponents;
 			sourceTree = "<group>";
 		};
 		FAE55FA32A2CA342005E82B1 /* View */ = {
@@ -282,6 +295,7 @@
 		FAF2805B2A4891DB008CE5C1 /* DecorativeView */ = {
 			isa = PBXGroup;
 			children = (
+				FAF280592A489145008CE5C1 /* ViewUtils.swift */,
 			);
 			path = DecorativeView;
 			sourceTree = "<group>";
@@ -376,8 +390,10 @@
 			files = (
 				FA004B0F2A34D6B2005C9B48 /* MainMenuModel.swift in Sources */,
 				FAE55F9E2A2C7B24005E82B1 /* AppStorage.swift in Sources */,
+				FA9B81B72A51B9790073A8F3 /* HPImageView.swift in Sources */,
 				FAC055E32A2B23EA008E401C /* SplashScreenView.swift in Sources */,
 				FAC055F32A2BA674008E401C /* LoginModel.swift in Sources */,
+				FA9B81B92A51E1100073A8F3 /* SceneHeaderView.swift in Sources */,
 				FA004B142A34F9BF005C9B48 /* UxStyleGuide.swift in Sources */,
 				FA004B122A34F854005C9B48 /* MenuItemView.swift in Sources */,
 				FAC055E52A2B247B008E401C /* HostingViewController.swift in Sources */,

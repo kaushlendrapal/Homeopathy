@@ -7,6 +7,7 @@
 
 import Combine
 import SwiftUI
+import UIKit
 
 typealias TimePublisher = Publishers.Autoconnect<Timer.TimerPublisher>
 
@@ -105,5 +106,18 @@ public struct OnChangeObserver<V: Equatable>: ViewModifier {
                     }
                     state = (newValue, action)
                 }
+    }
+}
+
+extension UIDevice {
+    
+    static var portraitWidth: CGFloat {
+        let screenSize = UIScreen.main.bounds
+        return min(screenSize.width, screenSize.height)
+    }
+    
+    static var landscapeWidth: CGFloat {
+        let screenSize = UIScreen.main.bounds
+        return max(screenSize.width, screenSize.height)
     }
 }

@@ -16,14 +16,14 @@ class HomeModuleRouter: BaseRouter {
     }
     
     override func push() {
-        var storage = AppStorage(launchStep: .start)
+        var storage = AppStorage.shared
         let view = SplashScreenView(appStorage: storage)
         let controller = HostingViewController(rootView: view)
         navigationController.pushViewController(controller, animated: true)
     }
     
     func pushDashboardScreen() {
-        var storage = AppStorage(launchStep: .start)
+        var storage = AppStorage.shared
         let view = DashboardView(appStorage: storage)
         let controller = HostingViewController(rootView: view)
         navigationController.pushViewController(controller, animated: true)

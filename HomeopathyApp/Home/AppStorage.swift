@@ -6,10 +6,12 @@
 //
 
 import Foundation
+import Combine
 
-final class AppStorage {
+final class AppStorage : ObservableObject {
+    static let shared = AppStorage(launchStep: .start)
     var launchStep: LaunchStep = .start
-    var mainMenuconfig: MainMenuConfig?
+    @Published var mainMenuconfig: MainMenuConfig = MainMenuConfig()
     
     init(launchStep: LaunchStep) {
         self.launchStep = launchStep
@@ -29,8 +31,6 @@ final class AppStorage {
     }
     
     private func onfinishLaunching() {
-//        self.launchStep = .libSetup
-//        self.launchSetupForInitialAppLoading()
         FirebaseRemoteStore.shared.fetchRemoteConfigValues(for: self)
     }
         
@@ -41,8 +41,7 @@ final class AppStorage {
     }
         
     private func checkForAppUpdate() {
-        Task.detached {
-            try await Task.sleep(nanoseconds: 1_000_000_000)
+        Task {
             self.launchStep = .finish
             self.launchSetupForInitialAppLoading()
             print("checkForAppUpdate")
@@ -67,7 +66,9 @@ extension AppStorage: IFirebaseRemoteStore {
     func onRemoteConfigFetchCompleted() {
         self.launchStep = .libSetup
         self.launchSetupForInitialAppLoading()
-        self.mainMenuconfig = FirebaseRemoteStore.shared.mainMenuConfig
+        if let _mainMenuconfig = FirebaseRemoteStore.shared.mainMenuConfig {
+            self.mainMenuconfig =  _mainMenuconfig
+        }
         print("Firebase fetch is done")
     }
 }

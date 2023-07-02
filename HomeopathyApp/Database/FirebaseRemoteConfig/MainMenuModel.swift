@@ -6,16 +6,24 @@
 //
 
 import Foundation
-
-import Foundation
+import Combine
 
 
 /// Firebase root key for menu navigation detail
 ///
-struct MainMenuConfig : Codable {
-    let apiVersion : String?
-    let bottomMenu : [MenuItem]?
-    let profileMenu : [MenuItem]?
+class MainMenuConfig : Decodable, ObservableObject {
+    
+    init(apiVersion: String = "1.0.0",
+                  bottomMenu: [MenuItem] = [],
+                  profileMenu: [MenuItem] = []) {
+        self.apiVersion = apiVersion
+        self.bottomMenu = bottomMenu
+        self.profileMenu = profileMenu
+    }
+    
+    var apiVersion : String = "1.0.0"
+    @Published var bottomMenu : [MenuItem] = []
+    @Published var profileMenu : [MenuItem] = []
 
     enum CodingKeys: String, CodingKey {
 
@@ -24,12 +32,17 @@ struct MainMenuConfig : Codable {
         case profileMenu = "profileMenu"
     }
 
-    init(from decoder: Decoder) throws {
+    required convenience init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
-        apiVersion = try values.decodeIfPresent(String.self, forKey: .apiVersion)
-        bottomMenu = try values.decodeIfPresent([MenuItem].self, forKey: .bottomMenu)
-        profileMenu = try values.decodeIfPresent([MenuItem].self, forKey: .profileMenu)
+        let apiVersion = try values.decodeIfPresent(String.self, forKey: .apiVersion) ?? "1.0.0"
+        let bottomMenu = try values.decodeIfPresent([MenuItem].self, forKey: .bottomMenu) ?? []
+        let profileMenu = try values.decodeIfPresent([MenuItem].self, forKey: .profileMenu) ?? []
+        self.init(apiVersion: apiVersion,
+                  bottomMenu: bottomMenu,
+                  profileMenu: profileMenu)
     }
+    
+    
 
 }
 
@@ -37,22 +50,25 @@ struct MainMenuConfig : Codable {
 /// Menu item is json mapping for each tab item or navigation list item in app.
 /// Currently used for Profile and bottom tab bar
 
-struct MenuItem: Codable {
+struct MenuItem: Codable, Identifiable {
     
-    init(title: String? = nil,
+    init(title: String = "",
          activeIconUrl: String? = nil,
          inactiveIconUrl: String? = nil,
-         sourceApi: String? = nil) {
+         sourceApi: String? = nil, imageSource: ImageSource = .catalogue) {
         self.title = title
         self.activeIconUrl = activeIconUrl
         self.inactiveIconUrl = inactiveIconUrl
         self.sourceApi = sourceApi
+        self.imageSource = imageSource
     }
     
-    let title : String?
-    let activeIconUrl : String?
-    let inactiveIconUrl : String?
-    let sourceApi : String?
+    var id: String = UUID().uuidString
+    var title : String
+    var activeIconUrl : String?
+    var inactiveIconUrl : String?
+    var imageSource: ImageSource = .catalogue
+    var sourceApi : String?
 
     enum CodingKeys: String, CodingKey {
 
@@ -60,14 +76,16 @@ struct MenuItem: Codable {
         case activeIconUrl = "activeIconUrl"
         case inactiveIconUrl = "inactiveIconUrl"
         case sourceApi = "sourceApi"
+        case imageSource = "imageSource"
     }
 
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
-        title = try values.decodeIfPresent(String.self, forKey: .title)
+        title = try values.decodeIfPresent(String.self, forKey: .title) ?? ""
         activeIconUrl = try values.decodeIfPresent(String.self, forKey: .activeIconUrl)
         inactiveIconUrl = try values.decodeIfPresent(String.self, forKey: .inactiveIconUrl)
         sourceApi = try values.decodeIfPresent(String.self, forKey: .sourceApi)
+        imageSource = try values.decodeIfPresent(ImageSource.self, forKey: .imageSource) ?? ImageSource.catalogue
     }
 
 }
