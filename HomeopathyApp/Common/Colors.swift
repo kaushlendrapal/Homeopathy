@@ -28,14 +28,14 @@ public enum Colors {
     case clear
     case Premium
     
-    static var themeTextField: Color {
-        return Color(red: 220.0/255.0, green: 230.0/255.0, blue: 230.0/255.0, opacity: 1.0)
-    }
+//    static var themeTextField: Color {
+//        return Color(red: 220.0/255.0, green: 230.0/255.0, blue: 230.0/255.0, opacity: 1.0)
+//    }
 
     private var rawValue: String {
         switch self {
         case .background:
-            return "ThemeBackground"
+            return "Background"
         case .Surface:
             return "PrimarySurface"
         case .SecondarySurface:

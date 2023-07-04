@@ -16,28 +16,30 @@ struct LoginView: View {
     var body: some View {
         ZStack {
             VStack {
-                Text("Homeopathy App")
-                    .font(.largeTitle).foregroundColor(Color.white)
-                    .padding([.top, .bottom], 40)
+                Text("Homeopathy Success")
+                    .font(Fonts.regular(20).font)
+                    .foregroundColor(Color.white)
+                    .padding(.top, 60)
+                    .padding(.bottom, 25)
                     .shadow(radius: 10.0, x: 20, y: 10)
                 Image("homeopathy_clinic")
                     .resizable()
                     .frame(width: 250, height: 250)
-                    .clipShape(Circle())
-                    .overlay(Circle().stroke(Color.white, lineWidth: 4))
-                    .shadow(radius: 10.0, x: 20, y: 10)
+                    .shadow(color: .black.opacity(0.25), radius: 2, x: 0, y: 4)
                     .padding(.bottom, 50)
                 
                 VStack(alignment: .leading, spacing: 15) {
                     
                     TextField("Email", text: self.$email)
+                        .foregroundColor(Colors.TextStyle.color)
                         .padding()
-                        .background(Colors.themeTextField)
+                        .background(Color.white)
                         .cornerRadius(20)
                     
                     SecureField("Password", text: self.$password)
+                        .foregroundColor(Colors.TextStyle.color)
                         .padding()
-                        .background(Colors.themeTextField)
+                        .background(Color.white)
                         .cornerRadius(20)
                     
                 }
@@ -47,27 +49,30 @@ struct LoginView: View {
                     // enable button press only if validation pass
                     self.userStorage.signIn(with: email, password: password)
                 }) {
-                    Text("Sign In")
+                    Text("Login")
                         .font(.headline)
-                        .foregroundColor(.white)
+                        .foregroundColor(Colors.Body.color)
                         .padding()
-                        .frame(width: 300, height: 50)
+                        .frame(width: 146, height: 52)
                 }
-                .background(
-                    LinearGradient(colors: [Color.purple, .blue, .purple],
-                                   startPoint: .topLeading,
-                                   endPoint: .bottomTrailing)
-                )
-                .cornerRadius(15.0)
-                .shadow(radius: 10.0, x: 20, y: 10)
+                .background(Color.white)
+                .cornerRadius(50.0)
+                .shadow(color: .black.opacity(0.25), radius: 2, x: 0, y: 4)
                 .padding(.top, 50)
                 Spacer()
             }
             .background(
-                LinearGradient(gradient: Gradient(colors: [.purple, .blue]),
-                               startPoint: .top,
-                               endPoint: .bottom)
-                .edgesIgnoringSafeArea(.all))
+                LinearGradient(
+                    stops: [
+                        Gradient.Stop(color: Color(red: 0.68, green: 0.78, blue: 0.47), location: 0.00),
+                        Gradient.Stop(color: Color(red: 0.68, green: 0.78, blue: 0.47).opacity(0.31), location: 1.00),
+                        Gradient.Stop(color: Color(red: 0.68, green: 0.78, blue: 0.47).opacity(0), location: 1.00),
+                    ],
+                    startPoint: UnitPoint(x: 0.5, y: 0),
+                    endPoint: UnitPoint(x: 0.5, y: 1)
+                )
+            )
+            .edgesIgnoringSafeArea(.all)
             if userStorage.shouldShow {
                 AppAlertView(alertModel: self.userStorage.alertModel,
                              onOkeyAction: {

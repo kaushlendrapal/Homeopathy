@@ -21,20 +21,20 @@ struct SplashScreenView: View {
             }
             .overlay (
                 VStack(alignment: .center) {
-                    Text("Homeopathy")
-                        .foregroundColor(Color.white)
-                        .font(Fonts.extraBold(35).font)
-                        .padding(10)
-                        .background(Color.green)
-                        .cornerRadius(10)
-                        .padding(EdgeInsets(top: 50,
-                                            leading: 0,
-                                            bottom: 0,
-                                            trailing: 35))
+                    VStack {
+                        Text("Homeopathy")
+                        Text("Success")
+                    }
+                    .foregroundColor(Color.white)
+                    .font(Fonts.extraBold(20).font)
+                    .padding(10)
+                    .background(Colors.background.color)
+                    .cornerRadius(10)
+                    .padding([.top], 100)
+                    .padding([.trailing], 35)
                     Spacer()
                 }
             )
-            .padding()
         }.onAppear {
             appStorage.launchSetupForInitialAppLoading()
         }
