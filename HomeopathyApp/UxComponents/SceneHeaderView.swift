@@ -10,7 +10,7 @@ import SwiftUI
 
 struct SceneHeaderView: View {
     struct UXGuidelineConstant {
-        static var topBarHeight: CGFloat = 44.0
+        static var topBarHeight: CGFloat = 85.0
         static var topBarPadding: CGFloat = 4.0
         static var topBarWidth: CGFloat = UIDevice.portraitWidth
     }
@@ -24,7 +24,7 @@ struct SceneHeaderView: View {
                                 inActiveImageUrl: appImage.inactiveIconUrl,
                                 activeImageUrl: appImage.activeIconUrl,
                                 state: .active)
-                    .frame(width: 32, height: 32)
+                    .frame(width: 65, height: 65)
                     .aspectRatio(contentMode: .fit)
                     .padding(UXGuidelineConstant.topBarPadding)
                     .padding(.leading, 6)
@@ -42,14 +42,14 @@ struct SceneHeaderView: View {
                                 inActiveImageUrl: profileImage.inactiveIconUrl,
                                 activeImageUrl: profileImage.activeIconUrl,
                                 state: .active)
-                    .frame(width: 32, height: 32)
+                    .frame(width: 34, height: 38)
                     .aspectRatio(contentMode: .fit)
                     .padding(.trailing, 10)
                 }
             }
         }
         .frame(width: UXGuidelineConstant.topBarWidth, height: UXGuidelineConstant.topBarHeight)
-        .background(Color.gray)
+        .background(Colors.background.color)
     }
     
 }

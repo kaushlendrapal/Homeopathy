@@ -17,11 +17,17 @@ struct DashboardView: View {
             VStack(spacing: 0.0) {
                 showHeaderView()
                 Spacer()
-                Text("Content view")
+                Text("Home View detail")
+                    .foregroundColor(Colors.TextStyle.color)
                 Spacer()
                 bottomMenuView
             }
+            .padding(.top, 32)
+            .padding(.bottom, 20)
+            .background(Colors.Surface.color)
         }
+        .edgesIgnoringSafeArea(.all)
+        .navigationBarHidden(true)
     }
     
     func showHeaderView() -> some View {
@@ -29,7 +35,6 @@ struct DashboardView: View {
             SceneHeaderView()
 //                .zIndex(1)
         }
-//        .frame(height: 44.0)
     }
     
     private var bottomMenuView: some View {

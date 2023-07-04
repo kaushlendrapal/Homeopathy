@@ -33,22 +33,21 @@ final class UserStorage: ObservableObject {
     }
     
     func signIn(with email: String, password: String) {
-        self.routeToDashboardScreen()
-
-//        Task {
-//            do {
-//                var _ = try await authManager.signIn(with: email, password: password)
-//                await MainActor.run(body: {
-//                    self.routeToDashboardScreen()
-//                })
-//            } catch {
-//                await MainActor.run(body: {
-//                    // show alert user name or password is invalid
-//                    print(error)
-//                    self.showValidationAlertOnFailure()
-//                })
-//            }
-//        }
+//        self.routeToDashboardScreen()
+        Task {
+            do {
+                var _ = try await authManager.signIn(with: email, password: password)
+                await MainActor.run(body: {
+                    self.routeToDashboardScreen()
+                })
+            } catch {
+                await MainActor.run(body: {
+                    // show alert user name or password is invalid
+                    print(error)
+                    self.showValidationAlertOnFailure()
+                })
+            }
+        }
     }
     
     func showValidationAlertOnFailure() {

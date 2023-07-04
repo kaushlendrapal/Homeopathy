@@ -10,15 +10,15 @@ import SwiftUI
 
 public enum Colors {
     // background layers
-    case background
-    case Surface
+    case background // top level ui background
+    case Surface //main screen background
     case SecondarySurface
     // overlay for Alert, sheet, presentation, popup
     case overlay
     // Opacity: inactive, hidden, disable
     case Blur
-    case Body // text
-    case TextStyle  // #DCE6E6
+    case Body // label text color
+    case TextStyle  //input text color
     case Primary // top navigation
     case Secondary // heading
     // used for special case like t&c, eula
@@ -28,10 +28,6 @@ public enum Colors {
     case clear
     case Premium
     
-//    static var themeTextField: Color {
-//        return Color(red: 220.0/255.0, green: 230.0/255.0, blue: 230.0/255.0, opacity: 1.0)
-//    }
-
     private var rawValue: String {
         switch self {
         case .background:
